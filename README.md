@@ -36,12 +36,10 @@ Or simply hit **Run** in NetBeans.
 
 ## Employee Fields
 
-| Field        | Type     |
-|-------------|----------|
-| `id`         | `int`    |
-| `name`       | `String` |
-| `department` | `String` |
-| `salary`     | `double` |
+ `id` - `int` 
+ `name` - `String` 
+ `department` - `String` 
+ `salary` - `double`
 
 ## Author
 
