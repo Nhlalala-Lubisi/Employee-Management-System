@@ -19,7 +19,7 @@ A console-based CRUD application built with Java 21, demonstrating Object-Orient
 
 ```
 src/
-└── nhlaks/employmanagementsyste/
+└── nhlaks/employeemanagementsystem/
     ├── Employee.java                  # Model — fields, getters, setters
     └── EmployeeManagementSystem.java  # Entry point — CRUD + menu loop
 ```
@@ -29,7 +29,7 @@ src/
 ```bash
 # Clone / open in NetBeans, then:
 mvn compile
-mvn exec:java -Dexec.mainClass="nhlaks.employmanagementsyste.EmployeeManagementSystem"
+mvn exec:java -Dexec.mainClass="nhlaks.employeemanagementsystem.EmployeeManagementSystem"
 ```
 
 Or simply hit **Run** in NetBeans.
