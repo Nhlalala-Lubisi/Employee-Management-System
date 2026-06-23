@@ -14,7 +14,7 @@ public class EmployeeManagementSystem {
     public static void main(String[] args) {
         System.out.println("=== Employee Management System ===");
 
-        // Seed some data so you have something to work with immediately
+        // Default data so you have something to work with immediately
         addEmployee("Nhlalala Khoza", "IT", 35000);
         addEmployee("Thabo Nkosi", "Finance", 42000);
         addEmployee("Lerato Dlamini", "HR", 31500);
@@ -39,9 +39,9 @@ public class EmployeeManagementSystem {
         scanner.close();
     }
 
-    // ─── CRUD Operations ─────────────────────────────────────────────────────
+    // CRUD Operations:
 
-    /** CREATE — prompts user for employee details and adds to list */
+    // prompt user for employee details and adds to list
     private static void createEmployee() {
         System.out.println("--- Add New Employee ---");
         String name = readString("Name: ");
@@ -52,7 +52,7 @@ public class EmployeeManagementSystem {
         System.out.printf("✔ Employee added with ID %d.%n%n", emp.getId());
     }
 
-    /** READ ALL — displays every employee in the list */
+    // Display every employee in the list
     private static void readAllEmployees() {
         System.out.println("--- All Employees ---");
         if (employees.isEmpty()) {
@@ -63,7 +63,7 @@ public class EmployeeManagementSystem {
         System.out.printf("%nTotal: %d employee(s)%n%n", employees.size());
     }
 
-    /** READ ONE — finds an employee by ID */
+    // Find an employee by ID
     private static void readEmployeeById() {
         int id = readInt("Enter employee ID: ");
         findById(id).ifPresentOrElse(
@@ -72,7 +72,7 @@ public class EmployeeManagementSystem {
         );
     }
 
-    /** UPDATE — lets user change name, department, or salary */
+    // Lets the user change name, department, or salary
     private static void updateEmployee() {
         int id = readInt("Enter employee ID to update: ");
         Optional<Employee> result = findById(id);
@@ -100,7 +100,7 @@ public class EmployeeManagementSystem {
         System.out.println("✔ Updated: " + emp + "\n");
     }
 
-    /** DELETE — removes an employee by ID */
+    // Removes an employee by ID
     private static void deleteEmployee() {
         int id = readInt("Enter employee ID to delete: ");
         boolean removed = employees.removeIf(e -> e.getId() == id);
@@ -109,7 +109,7 @@ public class EmployeeManagementSystem {
                 : "Employee not found.\n");
     }
 
-    // ─── Helpers ─────────────────────────────────────────────────────────────
+    // Helpers
 
     private static Employee addEmployee(String name, String dept, double salary) {
         Employee emp = new Employee(nextId++, name, dept, salary);
