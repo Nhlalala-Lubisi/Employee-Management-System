@@ -45,4 +45,4 @@ Or simply hit **Run** in NetBeans.
 
 ## Author
 
-Nhlalala Lubisi (Vaal University of Technology Student - IT (NQF7)
+Nhlalala Lubisi (Vaal University of Technology Student - AdvDip IT (NQF7)
